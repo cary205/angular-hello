@@ -1,3 +1,5 @@
+`ng serve --open --host $IP --port $PORT --disable-host-check`
+
 # AngularHello
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.1.3.
