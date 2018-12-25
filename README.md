@@ -1,3 +1,5 @@
+[![Build Status](https://cloud.drone.io/api/badges/cary205/angular-hello/status.svg)](https://cloud.drone.io/cary205/angular-hello)
+
 `ng serve --open --host $IP --port $PORT --disable-host-check`
 
 # AngularHello
