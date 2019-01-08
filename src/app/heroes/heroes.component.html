@@ -1,8 +1,9 @@
 <p>
-  heroes works!
+  == heroes ==========================
+</p>
+<p>
   123{{heroTitle}}456
 </p>
-
 
 
 <h2>{{hero.name | uppercase}} Details</h2>
@@ -16,13 +17,19 @@
 </div>
 
 
-
 <h2>My Heroes</h2>
+<!--<ul class="heroes">-->
+<!--  <li *ngFor="let hero of heroes" -->
+<!--  [class.selected]="hero === selectedHero"-->
+<!--  (click)="onSelect(hero)">-->
+<!--    <span class="badge">{{hero.id}}</span> {{hero.name}}-->
+<!--  </li>-->
+<!--</ul>-->
 <ul class="heroes">
-  <li *ngFor="let hero of heroes" 
-  [class.selected]="hero === selectedHero"
-  (click)="onSelect(hero)">
-    <span class="badge">{{hero.id}}</span> {{hero.name}}
+  <li *ngFor="let hero of heroes">
+    <a routerLink="/detail/{{hero.id}}">
+      <span class="badge">{{hero.id}}</span> {{hero.name}}
+    </a>
   </li>
 </ul>
 
@@ -36,4 +43,8 @@
   </div>
 </div>
 
-<app-hero-detail [hero]="selectedHero"></app-hero-detail>
+<!--<app-hero-detail [hero]="selectedHero"></app-hero-detail>-->
+
+<p>
+  == heroes ==========================
+</p>
