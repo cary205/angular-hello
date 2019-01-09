@@ -28,7 +28,21 @@ export class HeroesComponent implements OnInit {
   getHeroes(): void {
     this.heroService.getHeroes()
       //.subscribe(heroes => this.heroes = heroes);
-      .subscribe(heroes => this.heroes = this.heroes.concat(heroes));
+      .subscribe(heroes => {
+        
+        this.heroes.push({
+          id: 1,
+          name: '333'
+        });
+        
+        this.heroes = this.heroes.concat(heroes);
+        
+        this.heroes.push({
+          id: 1,
+          name: '555'
+        });
+        
+      });
   }
   
   selectedHero: Hero;
@@ -40,15 +54,15 @@ export class HeroesComponent implements OnInit {
   constructor(private heroService: HeroService) { }
 
   ngOnInit() {
-    this.heroes.push({
-      id: 1,
-      name: '333'
-    });
+    // this.heroes.push({
+    //   id: 1,
+    //   name: '333'
+    // });
     this.getHeroes();
-    this.heroes.push({
-      id: 1,
-      name: '555'
-    });
+    // this.heroes.push({
+    //   id: 1,
+    //   name: '555'
+    // });
   }
 
 }
