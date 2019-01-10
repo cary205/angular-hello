@@ -8,7 +8,7 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "predeploy": "ng build --prod --base-href \"https://cary205.github.io/angular-hello/\"",
+    "predeploy": "ng build --prod --base-href \"/angular-hello/\" && cp ./dist/angular-hello/index.html ./dist/angular-hello/404.html",
     "deploy": "gh-pages -d dist/angular-hello",
     "e2e": "ng e2e"
   },
