@@ -1,11 +1,19 @@
 import { TestBed, async } from '@angular/core/testing';
 import { AppComponent } from './app.component';
+import { Component } from '@angular/core';
+
+@Component({selector: 'router-outlet', template: ''})
+class MockRouterOutlet {}
+@Component({selector: 'app-messages', template: ''})
+class MockMessagesComponent {}
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [
-        AppComponent
+        AppComponent,
+        MockRouterOutlet,
+        MockMessagesComponent
       ],
     }).compileComponents();
   }));
