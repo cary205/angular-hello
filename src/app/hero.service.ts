@@ -79,6 +79,9 @@ export class HeroService {
   }
   
   /** DELETE: delete the hero from the server */
+  // Union Types
+  // We use the vertical bar (|) to separate each type, 
+  // so number | string | boolean is the type of a value that can be a number, a string, or a boolean.
   deleteHero (hero: Hero | number): Observable<Hero> {
     const id = typeof hero === 'number' ? hero : hero.id;
     const url = `${this.heroesUrl}/${id}`;
