@@ -18,11 +18,11 @@ export class FuliService {
     private http: HttpClient,
     private messageService: MessageService) { }
   
-  getFulis (): Observable<string[]> {
-    return this.http.get<string[]>(this.baseUrl + '20')
+  getFulis (): Observable<object> {
+    return this.http.get<object>(this.baseUrl + '20')
       .pipe(
         tap(_ => this.log('fetched fuli')),
-        catchError(this.handleError('getFulies', []))
+        catchError(this.handleError<object>('getFulies'))
       );
   }
   
